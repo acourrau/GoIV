@@ -90,15 +90,15 @@ public class Data {
     }
 
     /**
-     * Maximum pokemon level for a trainer, from the trainer level. That's usually trainerLevel + 1.5, but
+     * Maximum pokemon level for a trainer, from the trainer level. That's usually trainerLevel + 2.0, but
      * the maximum is 40 (http://pokemongo.gamepress.gg/power-up-costs).
      */
     public static double trainerLevelToMaxPokeLevel(int trainerLevel) {
-        return Math.min(trainerLevel + 1.5, 40);
+        return Math.min(trainerLevel + 2.0, 40);
     }
 
     /*
-     * Pokemon levels go from 1 to trainerLevel + 1.5, in increments of 0.5.
+     * Pokemon levels go from 1 to trainerLevel + 2.0, in increments of 0.5.
      * Here we use levelIdx for levels that are doubled and shifted by - 2; after this adjustment,
      * the level can be used to index CpM, arcX and arcY.
      */
